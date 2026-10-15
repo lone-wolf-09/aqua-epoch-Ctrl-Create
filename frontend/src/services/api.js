@@ -1,7 +1,8 @@
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export async function predictWaterQuality(data) {
-  const response = await fetch(`${API_URL}/predict`, {
+  const response = await fetch(`${API_URL}/predict/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -10,7 +11,10 @@ export async function predictWaterQuality(data) {
   });
 
   if (!response.ok) {
-    throw new Error("Prediction request failed");
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(
+      errorData.detail || `Prediction failed (${response.status})`
+    );
   }
 
   return response.json();

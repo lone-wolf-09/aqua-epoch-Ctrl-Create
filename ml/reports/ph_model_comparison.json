@@ -1,0 +1,85 @@
+{
+  "valid_pH_rows": 22367,
+  "split_sizes": {
+    "train": 15656,
+    "validation": 3355,
+    "test": 3356
+  },
+  "selection_rule": "Lowest validation MAE; test set not used for selection",
+  "models": {
+    "median_dummy": {
+      "validation": {
+        "MAE": 0.499846,
+        "RMSE": 0.685332,
+        "R2": -0.001065
+      },
+      "test": {
+        "MAE": 0.493696,
+        "RMSE": 0.659677,
+        "R2": -0.000578
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "MAE": 0.499744,
+        "RMSE": 0.688593,
+        "R2": -0.010615
+      },
+      "test": {
+        "MAE": 0.498713,
+        "RMSE": 0.665688,
+        "R2": -0.018897
+      }
+    },
+    "extra_trees": {
+      "validation": {
+        "MAE": 0.499732,
+        "RMSE": 0.688341,
+        "R2": -0.009876
+      },
+      "test": {
+        "MAE": 0.497712,
+        "RMSE": 0.662711,
+        "R2": -0.009801
+      }
+    },
+    "gradient_boosting": {
+      "validation": {
+        "MAE": 0.490202,
+        "RMSE": 0.674977,
+        "R2": 0.028957
+      },
+      "test": {
+        "MAE": 0.486598,
+        "RMSE": 0.651543,
+        "R2": 0.023945
+      }
+    }
+  },
+  "selected_by_validation_MAE": "gradient_boosting",
+  "selected_model_test_metrics_after_train_plus_validation_fit": {
+    "MAE": 0.486835,
+    "RMSE": 0.651863,
+    "R2": 0.022986
+  },
+  "features": [
+    "Hardness",
+    "TDS",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity",
+    "Calcium",
+    "Magnesium",
+    "Sodium",
+    "Potassium",
+    "Chloride",
+    "Nitrate",
+    "Fluoride",
+    "Iron",
+    "Alkalinity"
+  ],
+  "leakage_check": "pH and Potability excluded from input features"
+}

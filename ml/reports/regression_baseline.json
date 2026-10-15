@@ -1,0 +1,55 @@
+{
+  "rows_with_valid_pH": 22367,
+  "features": [
+    "Hardness",
+    "TDS",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity",
+    "Calcium",
+    "Magnesium",
+    "Sodium",
+    "Potassium",
+    "Chloride",
+    "Nitrate",
+    "Fluoride",
+    "Iron",
+    "Alkalinity"
+  ],
+  "leakage_check": "pH and Potability excluded from inputs",
+  "split_sizes": {
+    "train": 15656,
+    "validation": 3355,
+    "test": 3356
+  },
+  "models": {
+    "median_dummy": {
+      "validation": {
+        "MAE": 0.49984585570208645,
+        "RMSE": 0.6853317920835389,
+        "R2": -0.0010648139535629486
+      },
+      "test": {
+        "MAE": 0.4936961886984505,
+        "RMSE": 0.6596771941721685,
+        "R2": -0.0005780781182722627
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "MAE": 0.49974442080097514,
+        "RMSE": 0.6885931378449466,
+        "R2": -0.010615185928674942
+      },
+      "test": {
+        "MAE": 0.4987132369204699,
+        "RMSE": 0.6656884811589828,
+        "R2": -0.01889663360319771
+      }
+    }
+  },
+  "saved_model": "models/official_ph_regressor_baseline.pkl"
+}

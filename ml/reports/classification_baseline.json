@@ -1,0 +1,96 @@
+{
+  "rows": 22611,
+  "class_counts": {
+    "0": 13837,
+    "1": 8774
+  },
+  "class_semantics": "UNKNOWN: do not map to SAFE/UNSAFE without authoritative documentation",
+  "split_sizes": {
+    "train": 15827,
+    "validation": 3392,
+    "test": 3392
+  },
+  "models": {
+    "majority_dummy": {
+      "validation": {
+        "accuracy": 0.6120283018867925,
+        "balanced_accuracy": 0.5,
+        "precision_class_1": 0.0,
+        "recall_class_1": 0.0,
+        "f1_class_1": 0.0,
+        "average_precision_class_1": 0.38797169811320753,
+        "roc_auc": 0.5,
+        "confusion_matrix_labels_0_1": [
+          [
+            2076,
+            0
+          ],
+          [
+            1316,
+            0
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.6120283018867925,
+        "balanced_accuracy": 0.5,
+        "precision_class_1": 0.0,
+        "recall_class_1": 0.0,
+        "f1_class_1": 0.0,
+        "average_precision_class_1": 0.38797169811320753,
+        "roc_auc": 0.5,
+        "confusion_matrix_labels_0_1": [
+          [
+            2076,
+            0
+          ],
+          [
+            1316,
+            0
+          ]
+        ]
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "accuracy": 0.9920400943396226,
+        "balanced_accuracy": 0.9916889212947508,
+        "precision_class_1": 0.9893697798025817,
+        "recall_class_1": 0.9901215805471124,
+        "f1_class_1": 0.9897455374097988,
+        "average_precision_class_1": 0.9996470106843349,
+        "roc_auc": 0.9997723292982178,
+        "confusion_matrix_labels_0_1": [
+          [
+            2062,
+            14
+          ],
+          [
+            13,
+            1303
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.9926297169811321,
+        "balanced_accuracy": 0.9924487997142037,
+        "precision_class_1": 0.9893858984078847,
+        "recall_class_1": 0.9916413373860182,
+        "f1_class_1": 0.9905123339658444,
+        "average_precision_class_1": 0.9997922189106905,
+        "roc_auc": 0.999867497115683,
+        "confusion_matrix_labels_0_1": [
+          [
+            2062,
+            14
+          ],
+          [
+            11,
+            1305
+          ]
+        ]
+      }
+    }
+  },
+  "saved_model": "models/official_classifier_baseline.pkl"
+}

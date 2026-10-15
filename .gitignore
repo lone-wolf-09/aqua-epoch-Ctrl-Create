@@ -1,48 +1,23 @@
-# =========================
 # Python
-# =========================
-
 __pycache__/
 *.py[cod]
-*.pyo
-
-# Virtual environments
+*.pkl~
 venv/
 .venv/
-
-# Environment variables
 .env
+.env.*
+!.env.example
 
-# =========================
-# Node / React
-# =========================
-
+# Node
 node_modules/
 dist/
 
-# =========================
-# IDE
-# =========================
-
+# Editors / OS
 .vscode/
 .idea/
-
-# =========================
-# OS
-# =========================
-
 .DS_Store
 Thumbs.db
 
-# =========================
-# Python tools
-# =========================
-
+# Local outputs and caches
 .pytest_cache/
-.ipynb_checkpoints/
-
-# =========================
-# Logs
-# =========================
-
-*.log
+.mypy_cache/
